@@ -15,3 +15,11 @@ exercises.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+
+
+### Answer
+The implementation has a worst-case complexity of O(V+E), where V is the number of nodes and E is the number of edges. 
+
+
+The overall time complexity is O(V+E), with constant time complexities of O(1) for Graph constructor and addEdge methods, O(E) for isCyclicUtil function, and O(V) for isCyclic method.

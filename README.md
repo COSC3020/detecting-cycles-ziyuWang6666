@@ -19,7 +19,13 @@ answer, including your reasoning, to this markdown file.
 
 
 ### Answer
-The implementation has a worst-case complexity of O(V+E), where V is the number of nodes and E is the number of edges. 
+The implementation has a worst-case complexity of O(V+E), where V is the number of vertices and E is the number of edges. 
 
 
-The overall time complexity is O(V+E), with constant time complexities of O(1) for Graph constructor and addEdge methods, O(E) for isCyclicUtil function, and O(V) for isCyclic method.
+1. Graph constructor and addEdge are time complexity of constant time count as O(1)
+
+2. The isCyclicUtil function loops each row's siblings to judge if the edge visited or not. In the worst case, each edge is visited for once. So the worst time complexity is O(E), and E is the number of edges of the vertex. 
+
+3. The isocyclic method traverses each vertex and calls isCyclicUtil to check if the vertex has been visited previously. The worst time complexity of O(V+E), and V is the number of vertices in the graph.
+
+Therefore, the overall time complexity is O(V+E).
